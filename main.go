@@ -16,7 +16,7 @@ type serializeStruct struct {
 	Name  string
 }
 
-func (serObj *serObj) GetSpreadWithdrawInfoList(serialize string) (jsonres string) {
+func (serObj *serObj) Phpserialize2Json(serialize string) (jsonres string) {
 	var serializeMap []interface{}
 	err := phpserialize.Unmarshal([]byte(serialize), &serializeMap)
 	if err != nil {
